@@ -1,0 +1,7 @@
+#!/bin/sh
+if [[ "$1" = b || "$1" = build ]] 
+then
+  docker build -t python .
+fi
+
+docker run -it -v .:/home/python --rm --name python python /bin/sh
