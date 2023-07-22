@@ -1,0 +1,7 @@
+#!/bin/sh
+if [[ "$1" = b || "$1" = build ]] 
+then
+  docker build -t rust .
+fi
+
+docker run -it -v .:/home/rust --rm --name rust rust /bin/sh
